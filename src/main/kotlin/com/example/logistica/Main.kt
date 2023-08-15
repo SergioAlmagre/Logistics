@@ -28,10 +28,9 @@ fun main() {
     Connection.addItem()
     Connection.openConnection()
     Connection.closeConnection()
-    var store = Store("CoofeShop", 100,5)
-//    Connection.addStore(store)
-//    var loca = Factory.createLocations(store)
-    Connection.deleteAllLocation()
+    var store = Store("CoofeShop", 100,5,2)
+    Connection.addStore(store)
+    var loca = Factory.createLocations(store)
 
 
 

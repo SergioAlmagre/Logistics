@@ -39,23 +39,15 @@ object Factory {
         var vCheck2:Int
         var vCheck3:Int
 
-        var maxItemsAils = st.maxLocations/st.maxLines
-        var lines = st.maxLines
-        var cont: Pallet? = null
-        var end = maxItemsAils
+        var maxLocationsAils = (st.maxLocations/st.maxPalletsLocation)/st.maxLines
         var loc: Location? = null
-
-        var ai = 1
         var nLoc = 1
-
         var pair:Boolean = false
-        var letterSide = "L"
 
-
-        for (i in 1..lines){
-            letterSide = "L"
+        for (i in 1..st.maxLines){
+            var letterSide = "L"
             nLoc = 1
-            for (j in 1..end){
+            for (j in 1..maxLocationsAils){
                 if (pair){
                     letterSide = "R"
                     pair = false
