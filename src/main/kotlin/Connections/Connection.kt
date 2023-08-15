@@ -137,7 +137,105 @@ object Connection {
         }catch (e:Exception){
             println(e)
         }
-
     }
+
+
+    // --------------------------------DELETE ALL THINGS -------------------------------
+    fun deleteAllLocation(){
+        var sentence = "delete from location"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun deleteAllStores(){
+        var sentence = "delete from store"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun deleteAllContainers(){
+        var sentence = "delete from container"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun deleteAllEmployees(){
+        var sentence = "delete from employee"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun deleteAllItems(){
+        var sentence = "delete from item"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun deleteAllOrders(){
+        var sentence = "delete from store"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun deleteAllPallets(){
+        var sentence = "delete from pallet"
+        try{
+            openConnection()
+            var pstmt = connetion!!.prepareStatement(sentence)
+            pstmt.executeUpdate()
+            closeConnection()
+        }catch (e:Exception){
+            AuxClass.bitacoraRecord(sentence,e)
+        }
+    }
+
+    fun factoryReset (){
+        deleteAllOrders()
+        deleteAllEmployees()
+        deleteAllContainers()
+        deleteAllItems()
+        deleteAllPallets()
+        deleteAllLocation()
+        deleteAllStores()
+    }
+
+
+
 
 }

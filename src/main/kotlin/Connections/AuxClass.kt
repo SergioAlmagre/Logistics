@@ -12,7 +12,13 @@ object AuxClass {
     var pa: Pallet? = null
     var st: Store? = null
 
+    fun bitacoraRecord(sentence:String, e:Exception){
+        println(sentence)
+        println(e)
 
+
+
+    }
 
 
 }
