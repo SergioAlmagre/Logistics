@@ -9,7 +9,7 @@ import javafx.scene.text.Text
 import java.net.URL
 import java.util.*
 
-class AppPiker:Initializable {
+class AppPickerController:Initializable {
 
     var n1 = 0
     var n2 = 0

@@ -1,6 +1,8 @@
 package com.example.logistica
 
-class WelcomeController {
+class ControlPanelController {
+
+
 
 
 }

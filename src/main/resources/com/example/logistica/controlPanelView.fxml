@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="696.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.ControlPanelView">
+<AnchorPane prefHeight="696.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.ControlPanelController">
    <children>
       <TableView fx:id="Line1" layoutX="150.0" layoutY="100.0" prefHeight="432.0" prefWidth="147.0">
         <columns>

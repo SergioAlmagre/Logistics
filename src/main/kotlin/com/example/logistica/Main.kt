@@ -23,14 +23,12 @@ fun main() {
     Application.launch(HelloApplication::class.java)
 
 //    Connection.addEmployee()
-//    var employee = Connection.getEmployee(2)
 //    println(employee)
     Connection.addItem()
-    Connection.openConnection()
-    Connection.closeConnection()
+    Connection.addEmployee()
     var store = Store("CoofeShop", 100,5,2)
-    Connection.addStore(store)
-    var loca = Factory.createLocations(store)
+//    Connection.addStore(store)
+//    var loca = Factory.createLocations(store)
 
 
 

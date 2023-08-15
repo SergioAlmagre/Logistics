@@ -11,7 +11,7 @@ import javafx.scene.control.TextField
 import javafx.stage.Modality
 import javafx.stage.Stage
 
-class Login {
+class LoginController {
 
     @FXML
     private lateinit var enterButton: Button
@@ -27,28 +27,16 @@ class Login {
 
     @FXML
     fun pushEnter(event: ActionEvent) {
-
-//        val fxmlLoader  = FXMLLoader(HelloApplication::class.java.getResource("controlPanelView.fxml"))
-//        val scene = Scene(fxmlLoader.load())
-//        var stage = Stage()
-//        stage.title = "Estación de trabajo"
-//        stage.scene = scene
-//        stage.initModality(Modality.APPLICATION_MODAL)
-//        stage.showAndWait()
-
-        val fxmlLoader  = FXMLLoader(HelloApplication::class.java.getResource("pikerView.fxml"))
+        val fxmlLoader  = FXMLLoader(HelloApplication::class.java.getResource("menuView.fxml"))
         val scene = Scene(fxmlLoader.load())
         var stage = Stage()
         stage.title = "Estación de trabajo"
         stage.scene = scene
         stage.initModality(Modality.APPLICATION_MODAL)
         stage.showAndWait()
-
-
-
-
-
-
     }
 
 }
+
+
+

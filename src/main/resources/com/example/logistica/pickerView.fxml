@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="436.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.AppPiker">
+<AnchorPane prefHeight="436.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.AppPickerController">
    <children>
       <TextArea layoutX="210.0" layoutY="159.0" prefHeight="63.0" prefWidth="65.0" />
       <TextArea layoutX="118.0" layoutY="159.0" prefHeight="63.0" prefWidth="65.0" />
