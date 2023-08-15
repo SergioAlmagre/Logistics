@@ -1,9 +1,12 @@
-module com.example.logistics {
+module com.example.logistica {
     requires javafx.controls;
     requires javafx.fxml;
-    requires kotlin.stdlib;
+                requires kotlin.stdlib;
+    requires java.sql;
+
+    opens com.example.logistica to javafx.fxml;
+    exports com.example.logistica;
 
 
-    opens com.example.logistics to javafx.fxml;
-    exports com.example.logistics;
+
 }
