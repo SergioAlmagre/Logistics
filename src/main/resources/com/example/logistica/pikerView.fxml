@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="436.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.AppPiker">
+   <children>
+      <TextArea layoutX="210.0" layoutY="159.0" prefHeight="63.0" prefWidth="65.0" />
+      <TextArea layoutX="118.0" layoutY="159.0" prefHeight="63.0" prefWidth="65.0" />
+      <TextArea layoutX="23.0" layoutY="159.0" prefHeight="63.0" prefWidth="65.0" />
+      <Text fx:id="nCheck1" layoutX="40.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="nCheck2" layoutX="135.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="84">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="nCheck3" layoutX="227.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textField" layoutX="25.0" layoutY="251.0" prefHeight="26.0" prefWidth="198.0" />
+      <Button fx:id="readyButton" layoutX="224.0" layoutY="251.0" mnemonicParsing="false" text="Ready" />
+      <Text layoutX="25.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="25.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ails">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="185.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="nLocation" layoutX="204.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Text fx:id="nOrder" layoutX="98.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" />
+      <Text fx:id="nAils" layoutX="98.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+      <ProgressBar fx:id="progresBar" layoutX="24.0" layoutY="388.0" prefHeight="18.0" prefWidth="258.0" progress="0.0" />
+      <Text layoutX="25.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="nItem" layoutX="98.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45" />
+      <Button fx:id="backButton" layoutX="27.0" layoutY="303.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Back" />
+      <Button fx:id="skypButton" layoutX="169.0" layoutY="303.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="109.0" text="Skyp" />
+   </children>
+</AnchorPane>
