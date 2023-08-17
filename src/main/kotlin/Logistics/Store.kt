@@ -6,6 +6,9 @@ class Store {
     var maxLines:Int
     var maxPalletsLocation:Int
 
+
+
+
     constructor(nameStore: String, maxLocations: Int, maxLines:Int, maxPalletsLocation:Int) {
         this.nameStore = nameStore
         this.maxLocations = maxLocations

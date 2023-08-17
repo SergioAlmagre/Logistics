@@ -11,10 +11,6 @@ import java.util.*
 
 class AppPickerController:Initializable {
 
-    var n1 = 0
-    var n2 = 0
-    var loc: Location? = null
-
     @FXML
     private lateinit var backButton: Button
 

@@ -12,6 +12,7 @@ class Location {
     var nameStore:String?
     var side:String
     var storePallet:Array<Int> = Array(AuxClass.st!!.maxPalletsLocation){0}
+    var shelving = Shelving(null,null,0)
 
     constructor(nAisle: Int, nLocation: Int, vCheck1: Int, vCheck2: Int, vCheck3: Int, nameStore:String?, side:String) {
         this.nAisle = nAisle

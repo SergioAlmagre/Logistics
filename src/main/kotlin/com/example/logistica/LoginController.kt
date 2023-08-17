@@ -37,7 +37,6 @@ class LoginController {
         stage.title = "Estación de trabajo"
         stage.scene = scene
         stage.initModality(Modality.APPLICATION_MODAL)
-        stage.showAndWait()
     }
 
 }

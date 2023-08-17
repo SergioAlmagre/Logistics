@@ -29,7 +29,7 @@ object Factory {
 
     fun createItem():Item{
         var size = Random.nextInt(2,25)
-        var item = Item(null,size)
+        var item = Item(null,"Example",15)
         return item
     }
 
