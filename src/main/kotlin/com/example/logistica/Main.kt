@@ -1,9 +1,6 @@
 package com.example.logistica
 
-import Connections.AuxClass
 import Connections.Connection
-import Logistics.Store
-import Tools.Factory
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
@@ -22,11 +19,11 @@ class HelloApplication : Application() {
 fun main() {
     Application.launch(HelloApplication::class.java)
 
-//    Connection.addEmployee()
 //    println(employee)
-    Connection.addItem()
-    Connection.addEmployee()
-    var store = Store("CoofeShop", 100,5,2)
+//    Connection.addItem()
+    Connection.addEmployee("Sergio","Nunez",0,0,0)
+//    var store = Store("CoofeShop", 100,5,2)
+//    AuxClass.st = store
 //    Connection.addStore(store)
 //    var loca = Factory.createLocations(store)
 

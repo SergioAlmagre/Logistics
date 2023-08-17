@@ -1,6 +1,7 @@
 package Connections
 
 import Logistics.*
+import Orders.PickerOrder
 
 object AuxClass {
 
@@ -8,7 +9,7 @@ object AuxClass {
     var em : Employee? = null
     var it : Item? = null
     var lo: Location? = null
-    var or: Order? = null
+    var or: PickerOrder? = null
     var pa: Pallet? = null
     var st: Store? = null
 

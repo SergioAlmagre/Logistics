@@ -1,5 +1,7 @@
 package com.example.logistica
 
+import Connections.AuxClass
+import Connections.Connection
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
@@ -27,6 +29,8 @@ class LoginController {
 
     @FXML
     fun pushEnter(event: ActionEvent) {
+
+//        Connection.getEmployee()
         val fxmlLoader  = FXMLLoader(HelloApplication::class.java.getResource("menuView.fxml"))
         val scene = Scene(fxmlLoader.load())
         var stage = Stage()

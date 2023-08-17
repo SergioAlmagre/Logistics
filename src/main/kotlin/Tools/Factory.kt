@@ -3,6 +3,7 @@ package Tools
 import Connections.Connection
 import Logistics.*
 import kotlin.random.Random
+import kotlin.random.nextInt
 
 object Factory {
 
@@ -20,7 +21,8 @@ object Factory {
         val id = Random.nextInt(1000,9999).toString()
         var name = names[Random.nextInt(0,names.size)]
         var sn = secondName[Random.nextInt(0,names.size)]
-        var emp = Employee(id,name,sn)
+        var ro = Random.nextInt(0..1)
+        var emp = Employee(id,name,sn,0,ro)
 
         return emp
     }

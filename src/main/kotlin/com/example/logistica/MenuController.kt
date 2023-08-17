@@ -52,4 +52,10 @@ class MenuController {
         stage.showAndWait()
     }
 
+    @FXML
+    fun MyCompanyButtonPush(event: ActionEvent) {
+
+
+    }
+
 }

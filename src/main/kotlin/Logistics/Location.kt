@@ -1,5 +1,7 @@
 package Logistics
 
+import Connections.AuxClass
+
 class Location {
 
     var nAisle:Int
@@ -9,6 +11,7 @@ class Location {
     var vCheck3:Int
     var nameStore:String?
     var side:String
+    var storePallet:Array<Int> = Array(AuxClass.st!!.maxPalletsLocation){0}
 
     constructor(nAisle: Int, nLocation: Int, vCheck1: Int, vCheck2: Int, vCheck3: Int, nameStore:String?, side:String) {
         this.nAisle = nAisle

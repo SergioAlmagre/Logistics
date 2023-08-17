@@ -1,8 +1,6 @@
 package Connections
 
-import Connections.Constants
 import Logistics.Employee
-import Logistics.Item
 import Logistics.Location
 import Logistics.Store
 import Tools.Factory
@@ -10,7 +8,6 @@ import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.ResultSet
 import java.sql.Statement
-import kotlin.math.ceil
 
 object Connection {
 
@@ -56,14 +53,24 @@ object Connection {
     }
     //------------------------------------------------------------------------------------------------
 
-    fun addEmployee(){
-        var employee = Factory.createEmployee()
-        var sentence = "insert into employee values (default,?,?)"
+    fun addEmployee(nameEmployee: String, secondName:String, working:Int, idStore:Int, rol:Int){
+//        var employee = Factory.createEmployee()
+        var nameEmployeeDb = nameEmployee
+        var secondNameEmployeeDb = secondName
+        nameEmployeeDb = nameEmployeeDb.trim()
+        nameEmployeeDb = nameEmployee.get(0).toString()
+        secondNameEmployeeDb = nameEmployeeDb.trim()
+        nameEmployeeDb = secondNameEmployeeDb
+        println(nameEmployee)
+        var sentence = "insert into employee values (default,?,?,?,?,?)"
         try {
             openConnection()
             var pstmt = connetion!!.prepareStatement(sentence)
-            pstmt.setString(1,employee.name)
-            pstmt.setString(2,employee.secondName)
+            pstmt.setString(1,nameEmployee)
+            pstmt.setString(2,secondName)
+            pstmt.setInt(3,working)
+            pstmt.setInt(4,idStore)
+            pstmt.setInt(5,rol)
             pstmt.executeUpdate()
             closeConnection()
         }catch (e:Exception){
@@ -71,19 +78,22 @@ object Connection {
         }
     }
 
-    fun getEmployee(id:Int):Employee{
-        var sentence = "select * from employee where idEmployee = ?"
+    fun getEmployee(nameEmpoloye:String ,id:Int):Employee{
+        var sentence = "select * from employee where idEmployee = ?,?"
         var emp: Employee? = null
         try{
             openConnection()
             var pstmt = connetion!!.prepareStatement(sentence)
             pstmt.setInt(1,id)
+            pstmt.setString(2,nameEmpoloye)
             registros = pstmt.executeQuery()
             while (registros!!.next()){
                 emp = Employee(
                     registros!!.getString(1),
                     registros!!.getString(2),
-                    registros!!.getString(3))
+                    registros!!.getString(3),
+                    registros!!.getInt(4),
+                    registros!!.getInt(5))
             }
 
         }catch (e:Exception){

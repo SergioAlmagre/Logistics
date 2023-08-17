@@ -1,6 +1,6 @@
-package Logistics
+package Orders
 
-class Order {
+class PickerOrder {
 
     var idOrder:Int
     var idItem:Int
