@@ -10,11 +10,14 @@ class ClientOrder: Order {
         idItem: Int,
         amount: Int,
         storeName: String,
+        height: Int,
         status: String,
         idClientOrder: Int,
         idClient: Int
-    ) : super(idOrder, idItem, amount, storeName, status) {
+    ) : super(idOrder, idItem, amount, storeName, height, status) {
         this.idClientOrder = idClientOrder
         this.idClient = idClient
     }
+
+
 }

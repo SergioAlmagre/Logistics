@@ -1,5 +1,7 @@
 package Connections
 
+import Localizacion.Location
+import Localizacion.Pallet
 import Logistics.*
 import Orders.PickerOrder
 

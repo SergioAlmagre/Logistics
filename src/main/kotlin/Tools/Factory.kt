@@ -1,6 +1,7 @@
 package Tools
 
 import Connections.Connection
+import Localizacion.Location
 import Logistics.*
 import kotlin.random.Random
 import kotlin.random.nextInt

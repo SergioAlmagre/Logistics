@@ -1,7 +1,7 @@
 package Connections
 
 import Logistics.Employee
-import Logistics.Location
+import Localizacion.Location
 import Logistics.Store
 import Tools.Factory
 import java.sql.Connection
@@ -116,7 +116,7 @@ object Connection {
         }
     }
 
-    fun addLocations(location:Location){
+    fun addLocations(location: Location){
         var sentence = "insert into location values (?,?,?,?,?,?,?)"
         try{
             openConnection()
