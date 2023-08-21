@@ -1,23 +1,17 @@
 package Orders
 
+import java.time.LocalDateTime
+import java.util.Date
+
 class ClientOrder: Order {
 
-    var idClientOrder:Int
     var idClient:Int
+    var storeName: String
+    var date:LocalDateTime
 
-    constructor(
-        idOrder: Int,
-        idItem: Int,
-        amount: Int,
-        storeName: String,
-        height: Int,
-        status: String,
-        idClientOrder: Int,
-        idClient: Int
-    ) : super(idOrder, idItem, amount, storeName, height, status) {
-        this.idClientOrder = idClientOrder
+    constructor(idOrder: Int, status: Int, idClient: Int, storeName: String, date: LocalDateTime) : super(idOrder, status) {
         this.idClient = idClient
+        this.storeName = storeName
+        this.date = date
     }
-
-
 }

@@ -2,14 +2,15 @@ package Logistics
 
 class Employee {
 
-    var idEmployee:String
+    var idEmployee:Int?
     var nameEmployee:String
     var secondName:String
     var working:Int
+    var idStore:Int?
     var rol:Int
-    var idStore:Int
 
-    constructor(idEmployee: String, nameEmployee: String, secondName: String, working: Int, rol: Int, idStore: Int) {
+
+    constructor(idEmployee: Int?, nameEmployee: String, secondName: String, working: Int, idStore: Int?,rol: Int) {
         this.idEmployee = idEmployee
         this.nameEmployee = nameEmployee
         this.secondName = secondName

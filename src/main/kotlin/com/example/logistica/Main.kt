@@ -19,14 +19,6 @@ class HelloApplication : Application() {
 fun main() {
     Application.launch(HelloApplication::class.java)
 
-//    println(employee)
-//    Connection.addItem()
-    Connection.addEmployee("Sergio","Nunez",0,0,0)
-//    var store = Store("CoofeShop", 100,5,2)
-//    AuxClass.st = store
-//    Connection.addStore(store)
-//    var loca = Factory.createLocations(store)
-
 
 
 

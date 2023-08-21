@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.CreateCompanyController">
+<AnchorPane prefHeight="270.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.logistica.CreateCompanyController">
    <children>
-      <Text layoutX="205.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create company">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Text>
-      <TextField layoutX="299.0" layoutY="108.0" />
-      <TextField layoutX="299.0" layoutY="236.0" />
-      <TextField layoutX="299.0" layoutY="194.0" />
-      <Text layoutX="194.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company name" />
-      <Text layoutX="229.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max ails" />
-      <Text layoutX="169.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max storage (pallet)" />
-      <Text layoutX="183.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max repeat pallet" />
-      <TextField layoutX="299.0" layoutY="151.0" />
-      <Button layoutX="270.0" layoutY="303.0" mnemonicParsing="false" text="Register" />
+      <ImageView fitHeight="278.0" fitWidth="351.0" layoutX="-20.0" layoutY="-6.0">
+         <image>
+            <Image url="@../../../images/Background.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="companyNameField" layoutX="150.0" layoutY="72.0" />
+      <Text layoutX="52.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company name" />
+      <Button fx:id="buttonRegister" layoutX="137.0" layoutY="162.0" mnemonicParsing="false" onAction="#registerButtonPush" text="Register" />
    </children>
 </AnchorPane>

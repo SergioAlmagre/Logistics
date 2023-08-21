@@ -7,10 +7,11 @@ package Logistics
 class Item {
 
     var idItem:Int?
-    var nameItem:String
-    var size:Int
 
-    constructor(idItem: Int?, name: String, size: Int) {
+    var size:Int
+    var nameItem:String
+
+    constructor(idItem: Int?, size: Int,name: String) {
         this.idItem = idItem
         this.nameItem = name
         this.size = size

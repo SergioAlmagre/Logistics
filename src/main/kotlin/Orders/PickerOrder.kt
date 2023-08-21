@@ -1,21 +1,12 @@
 package Orders
 
+import Logistics.Item
+
 class PickerOrder:Order {
 
-    var idPickerOrder:Int
     var idEmployee:String
 
-    constructor(
-        idOrder: Int,
-        idItem: Int,
-        amount: Int,
-        storeName: String,
-        height: Int,
-        status: String,
-        idPickerOrder: Int,
-        idEmployee: String
-    ) : super(idOrder, idItem, amount, storeName, height, status) {
-        this.idPickerOrder = idPickerOrder
+    constructor(idOrder: Int, status: Int, idEmployee: String) : super(idOrder, status) {
         this.idEmployee = idEmployee
     }
 }
