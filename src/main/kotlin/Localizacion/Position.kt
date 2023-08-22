@@ -13,4 +13,10 @@ class Position {
         this.empty = empty
         this.idLocation = idLocation
     }
+
+    override fun toString(): String {
+        return "Position(idPosition=$idPosition, empty=$empty, pallet=$pallet, idLocation=$idLocation)"
+    }
+
+
 }

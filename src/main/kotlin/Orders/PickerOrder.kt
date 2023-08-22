@@ -9,4 +9,10 @@ class PickerOrder:Order {
     constructor(idOrder: Int, status: Int, idEmployee: String) : super(idOrder, status) {
         this.idEmployee = idEmployee
     }
+
+    override fun toString(): String {
+        return "PickerOrder(idEmployee='$idEmployee')"
+    }
+
+
 }

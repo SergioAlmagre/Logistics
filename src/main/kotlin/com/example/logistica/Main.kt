@@ -1,6 +1,7 @@
 package com.example.logistica
 
 import Connections.Connection
+import Tools.Factory
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
@@ -18,7 +19,7 @@ class HelloApplication : Application() {
 
 fun main() {
     Application.launch(HelloApplication::class.java)
-
+    Factory.createClientOrderAuto()
 
 
 

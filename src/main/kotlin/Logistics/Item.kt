@@ -7,7 +7,6 @@ package Logistics
 class Item {
 
     var idItem:Int?
-
     var size:Int
     var nameItem:String
 
@@ -16,4 +15,10 @@ class Item {
         this.nameItem = name
         this.size = size
     }
+
+    override fun toString(): String {
+        return "Item(idItem=$idItem, size=$size, nameItem='$nameItem')"
+    }
+
+
 }

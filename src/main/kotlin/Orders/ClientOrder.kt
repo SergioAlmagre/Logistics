@@ -14,4 +14,10 @@ class ClientOrder: Order {
         this.storeName = storeName
         this.date = date
     }
+
+    override fun toString(): String {
+        return "ClientOrder(idClient=$idClient, storeName='$storeName', date=$date)"
+    }
+
+
 }

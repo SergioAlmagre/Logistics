@@ -8,9 +8,6 @@ open class Order {
     var idOrder: Int
     var status: Int
 
-
-
-
     constructor(
         idOrder: Int,
         status: Int,
@@ -18,6 +15,12 @@ open class Order {
         this.idOrder = idOrder
         this.status = status
     }
+
+    override fun toString(): String {
+        return "Order(idOrder=$idOrder, status=$status)"
+    }
+
+
 }
 
 

@@ -15,7 +15,7 @@ class Pallet {
         idItem: Int?,
         initialAmount: Int?,
         remain: Int?,
-        idLocation: Int?,
+        idPosition: Int?,
         empty: Int,
         damageItems: Int
     ) {
@@ -23,8 +23,14 @@ class Pallet {
         this.idItem = idItem
         this.initialAmount = initialAmount
         this.remain = remain
-        this.idPosition = idLocation
+        this.idPosition = idPosition
         this.empty = empty
         this.damageItems = damageItems
     }
+
+    override fun toString(): String {
+        return "Pallet(idPallet=$idPallet, idItem=$idItem, initialAmount=$initialAmount, remain=$remain, idPosition=$idPosition, empty=$empty, damageItems=$damageItems)"
+    }
+
+
 }

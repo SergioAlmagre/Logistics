@@ -2,7 +2,10 @@ package Tools
 
 import Connections.Connection
 import Localizacion.Location
+import Localizacion.Pallet
 import Logistics.*
+import Orders.ClientOrder
+import java.time.LocalDateTime
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -38,9 +41,43 @@ object Factory {
     }
 
     fun createItem(): Item {
+        val names = listOf("Milk", "Eggs", "Bread", "Lentils", "Sugar", "Peppers", "Cheese", "Chocolat", "Pizza", "Toilet pappel")
+        var name = names[Random.nextInt(0, names.size)]
         var size = Random.nextInt(2, 25)
-        var item = Item(null, "Example", 15)
+        var item = Item(null,size,name)
         return item
+    }
+
+    fun createShoppingList():ArrayList<Item>{
+        var shoppingList = ArrayList<Item>()
+        var randomNumItems = Random.nextInt(1,23)
+        for (i in 1..randomNumItems){
+            shoppingList.add(createItem())
+        }
+        return shoppingList
+    }
+
+    fun createClientOrderAuto(){
+//    Store
+        var store = Store("THC",null)
+//    Client
+        var date = LocalDateTime.now()
+        var maxClients:Int = 10
+        var randomIdClients:Int = Random.nextInt(1,maxClients)
+//    Items
+        var maxItemsClientOrder:Int = 10
+        var randomItem:Int = Random.nextInt(1,maxItemsClientOrder)
+//    Pallet
+        var maxItemsPallet:Int = Random.nextInt(20,135)
+        // fix idPosition
+        var pallet = Pallet(null,randomItem,maxItemsPallet,maxItemsPallet,0,0,0)
+//    Client Order
+        var clientOrder = ClientOrder(1,1,randomIdClients,store.nameStore,date)
+        var shoppingList = Factory.createShoppingList()
+
+        println(pallet)
+        println(clientOrder)
+        println(shoppingList)
     }
 
 

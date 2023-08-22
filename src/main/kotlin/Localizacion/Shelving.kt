@@ -13,4 +13,10 @@ class Shelving {
         this.idPosition = idLocation
         this.maxLevels = maxLevel
     }
+
+    override fun toString(): String {
+        return "Shelving(maxPalletsBehind=$maxPalletsBehind, maxLevels=$maxLevels, idPosition=$idPosition, shelvings=${shelvings.contentToString()})"
+    }
+
+
 }

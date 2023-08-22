@@ -35,4 +35,10 @@ class Location {
         this.side = side
         this.shelving = shelving
     }
+
+    override fun toString(): String {
+        return "Location(idLocation=$idLocation, nAisle=$nAisle, nLocation=$nLocation, vCheck1=$vCheck1, vCheck2=$vCheck2, vCheck3=$vCheck3, idStore=$idStore, side='$side', shelving=$shelving)"
+    }
+
+
 }

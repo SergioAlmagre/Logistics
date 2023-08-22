@@ -19,4 +19,9 @@ class ShoppingList {
 
     }
 
+    override fun toString(): String {
+        return "ShoppingList(shoppingList=$shoppingList)"
+    }
+
+
 }

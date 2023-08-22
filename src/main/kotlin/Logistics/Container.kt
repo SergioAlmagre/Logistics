@@ -17,4 +17,10 @@ class Container {
         this.idEmployee = idEmployee
         this.freeSpaceInside = freeSpace
     }
+
+    override fun toString(): String {
+        return "Container(idContainer=$idContainer, idEmployee=$idEmployee, freeSpaceInside=$freeSpaceInside, items=${items.contentToString()})"
+    }
+
+
 }
