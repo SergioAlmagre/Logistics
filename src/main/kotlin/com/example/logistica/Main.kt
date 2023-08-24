@@ -1,6 +1,7 @@
 package com.example.logistica
 
 import Connections.Connection
+import Logistics.Store
 import Tools.Factory
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
@@ -19,7 +20,8 @@ class HelloApplication : Application() {
 
 fun main() {
     Application.launch(HelloApplication::class.java)
-    Factory.createClientOrderAuto()
+    var newStore = Store("Test",1)
+    Factory.createLocationsAndShelvings(1,0,10,newStore)
 
 
 

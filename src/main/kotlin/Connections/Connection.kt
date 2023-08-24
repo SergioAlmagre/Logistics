@@ -121,7 +121,7 @@ object Connection {
     }
 
     fun addLocations(location: Location){
-        var sentence = "insert into location values (?,?,?,?,?,?,?)"
+        var sentence = "insert into location values (?,?,?,?,?,?)"
         try{
             openConnection()
             var pstmt = connetion!!.prepareStatement(sentence)
@@ -130,7 +130,6 @@ object Connection {
             pstmt.setInt(3,location.vCheck2)
             pstmt.setInt(4,location.vCheck3)
             pstmt.setInt(5, location.nLocation)
-            pstmt.setString(6,location.side)
             pstmt.executeUpdate()
             closeConnection()
         }catch (e:Exception){

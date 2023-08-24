@@ -1,8 +1,9 @@
 package Tools
 
-import Connections.Connection
 import Localizacion.Location
 import Localizacion.Pallet
+import Localizacion.Position
+import Localizacion.Shelving
 import Logistics.*
 import Orders.ClientOrder
 import java.time.LocalDateTime
@@ -10,13 +11,7 @@ import kotlin.random.Random
 import kotlin.random.nextInt
 
 object Factory {
-//
-//    fun createUser(){
-//        val name = listOf("Juan", "Ana", "Pedro", "Lucía", "Sofía", "Miguel", "Laura", "Luis", "María", "Carlos")
-//        val secondName = listOf("García", "Fernández", "Martínez", "González", "López", "Pérez", "Rodríguez", "Sánchez", "Romero", "Álvarez")
-//        val id = Random.nextInt(1000,9999)
-//    }
-
+    var idClientOrder = 0
 
     fun createEmployee(): Employee {
         val names = listOf("Juan", "Ana", "Pedro", "Lucía", "Sofía", "Miguel", "Laura", "Luis", "María", "Carlos")
@@ -57,28 +52,57 @@ object Factory {
         return shoppingList
     }
 
-    fun createClientOrderAuto(){
-//    Store
-        var store = Store("THC",null)
+    fun createClientOrderAuto(store:Store){
 //    Client
         var date = LocalDateTime.now()
         var maxClients:Int = 10
         var randomIdClients:Int = Random.nextInt(1,maxClients)
-//    Items
-        var maxItemsClientOrder:Int = 10
-        var randomItem:Int = Random.nextInt(1,maxItemsClientOrder)
-//    Pallet
-        var maxItemsPallet:Int = Random.nextInt(20,135)
-        // fix idPosition
-        var pallet = Pallet(null,randomItem,maxItemsPallet,maxItemsPallet,0,0,0)
 //    Client Order
-        var clientOrder = ClientOrder(1,1,randomIdClients,store.nameStore,date)
-        var shoppingList = Factory.createShoppingList()
-
-        println(pallet)
+        idClientOrder++
+        var clientOrder = ClientOrder(idClientOrder,1,randomIdClients,store.nameStore,date)
+        var shoppingList = createShoppingList()
         println(clientOrder)
         println(shoppingList)
     }
+
+
+    fun createLocationsAndShelvings(maxPalletsBehind:Int, maxLevels:Int, maxLocations:Int, store:Store){
+        var idLocation = 1
+        var maxLocations = maxPalletsBehind * maxLevels * maxLocations
+        var nAisle = 1
+        var location:Location? = null
+        var shelvings:Shelving? = null
+        var position:Position? = null
+
+        for (i in 0..maxLocations){
+            position = Position(null,null,null,idLocation)
+            shelvings = Shelving(maxPalletsBehind,i,maxLevels)
+            for (fil in 0..maxLevels){
+                for (col in 0..maxPalletsBehind){
+                    shelvings.setPositions(fil,col,position)
+                }
+            }
+            location = Location(idLocation,nAisle,i,45,45,83,store.idStore!!)
+            location.addShelving(shelvings)
+            idLocation++
+            println(location)
+        }
+        nAisle++ //fix this objet
+
+    }
+
+
+
+    fun addPalletToShelvingAutoRandom(shelvings: Shelving){
+        var maxLocations = shelvings.maxLevels * shelvings.maxPalletsBehind
+        var maxItemsClientOrder:Int = 10
+        var idPosition:Int = Random.nextInt(0,maxLocations)
+        var randomItem:Int = Random.nextInt(1,maxItemsClientOrder)
+        var maxItemsPallet:Int = Random.nextInt(20,135)
+        var pallet = Pallet(null,randomItem,maxItemsPallet,maxItemsPallet,0,0,0)
+        println(pallet)
+    }
+
 
 
 }

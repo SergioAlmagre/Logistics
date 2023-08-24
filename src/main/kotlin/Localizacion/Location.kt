@@ -11,7 +11,6 @@ class Location {
     var vCheck2:Int
     var vCheck3:Int
     var idStore:Int
-    var side:String
     var shelving: Shelving? = null
 
     constructor(
@@ -22,8 +21,6 @@ class Location {
         vCheck2: Int,
         vCheck3: Int,
         idStore: Int,
-        side: String,
-        shelving: Shelving?
     ) {
         this.idLocation = idLocation
         this.nAisle = nAisle
@@ -32,12 +29,16 @@ class Location {
         this.vCheck2 = vCheck2
         this.vCheck3 = vCheck3
         this.idStore = idStore
-        this.side = side
+    }
+
+
+
+    fun addShelving(shelving:Shelving){
         this.shelving = shelving
     }
 
     override fun toString(): String {
-        return "Location(idLocation=$idLocation, nAisle=$nAisle, nLocation=$nLocation, vCheck1=$vCheck1, vCheck2=$vCheck2, vCheck3=$vCheck3, idStore=$idStore, side='$side', shelving=$shelving)"
+        return "Location(idLocation=$idLocation, nAisle=$nAisle, nLocation=$nLocation, vCheck1=$vCheck1, vCheck2=$vCheck2, vCheck3=$vCheck3, idStore=$idStore, shelving=$shelving)"
     }
 
 

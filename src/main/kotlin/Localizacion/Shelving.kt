@@ -3,19 +3,25 @@ package Localizacion
 class Shelving {
 
     var maxPalletsBehind:Int
-    var maxLevels:Int = 0
-    var idPosition:Int?
-    val shelvings = Array(0) { Array<Position?>(maxLevels) {null}}
+    var maxLevels:Int
+    var idLocation:Int?
+    var shelving:Array<Array<Position>>? = Array(10){Array<Position>(10){ Position(null,null,null,null) } }
 
+//    Array(maxPalletsBehind) { Array(maxLevels) { Position(null,null,null,null) } }
 
-    constructor(unitsPalletsAmount: Int, idLocation: Int?,maxLevel:Int) {
+    constructor(unitsPalletsAmount: Int, idLocation: Int?, maxLevel:Int) {
         this.maxPalletsBehind = unitsPalletsAmount
-        this.idPosition = idLocation
+        this.idLocation = idLocation
         this.maxLevels = maxLevel
     }
 
+
+    fun setPositions(fil:Int, col:Int, newPosition:Position){
+        this.shelving!![fil][col] = newPosition
+    }
+
     override fun toString(): String {
-        return "Shelving(maxPalletsBehind=$maxPalletsBehind, maxLevels=$maxLevels, idPosition=$idPosition, shelvings=${shelvings.contentToString()})"
+        return "Shelving(maxPalletsBehind=$maxPalletsBehind, maxLevels=$maxLevels, idLocation=$idLocation, shelving=${shelving.contentToString()})"
     }
 
 

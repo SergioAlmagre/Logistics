@@ -8,7 +8,7 @@ import Tools.Factory
 import java.time.LocalDateTime
 import kotlin.random.Random
 
-class ManualClientOrder {
+class ManualSystem {
 
 
     //    Store
